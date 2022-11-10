@@ -85,7 +85,7 @@ Navigate to Renderer
     //Update Renderer
     renderer.setSize(sizes.width, sizes.height)
                                                               //Here 
-   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
     }) 
 `
 -----------------------------------------------------------
@@ -96,7 +96,7 @@ handle Full Screen (for immersive experiences)
 
 //This version won't show on Safari(apple) browsers but the below will 
 
-`window.addEventListener('dblclick', ()=>{
+    `window.addEventListener('dblclick', ()=>{
 
     const fullscreenElement = document.fullscreenElement|| document.webkitFullscreenElement
 
@@ -137,6 +137,6 @@ handle Full Screen (for immersive experiences)
             document.webkitExitFullscreen()
         }
     }
-})`
+    })`
 
 --------------------------------------------------------------------
