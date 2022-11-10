@@ -72,7 +72,7 @@ Navigate to Renderer
 
 ---this can go in the set size area---
 
-`window.addEventListener('resize', ()=>{
+    `window.addEventListener('resize', ()=>{
     //Update window sizing 
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
