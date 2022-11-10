@@ -15,17 +15,20 @@ npm run dev
 npm run build
 ```
 ------------------------------------
+    
     Key Take Aways 
 
 -----------------------------------
 Handling resize
+
 //Javascript 
+
     `const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
-}
+    }
 
-window.addEventListener('resize', ()=>{
+    window.addEventListener('resize', ()=>{
     //Update window sizing 
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
@@ -37,35 +40,38 @@ window.addEventListener('resize', ()=>{
 
     //Update Renderer
     renderer.setSize(sizes.width, sizes.height)
-})
+    })
 
 //CSS 
-*{
+
+    *{
     margin: 0;
     padding: 0;
-}
+    }
 
-html,body{
+    html,body{
     overflow: hidden;
-}
+    }
 
-.webgl{
+    .webgl{
     position: fixed;
     top: 0;
     left: 0;
     outline: none;
-} `
+    } `
 --------------------------------------------------------
 
 Fixing the STAIRS effect (look at edge of cube, not straight has jagged lines )
 
 handle Pixel ratio
+
 Navigate to Renderer
 
  `renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))`
 
 
-this can go in the set size area
+---this can go in the set size area---
+
 `window.addEventListener('resize', ()=>{
     //Update window sizing 
     sizes.width = window.innerWidth
@@ -80,11 +86,12 @@ this can go in the set size area
     renderer.setSize(sizes.width, sizes.height)
                                                               //Here 
    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
-}) 
+    }) 
 `
 -----------------------------------------------------------
 
 handle Full Screen (for immersive experiences)
+
 //on double click go to full screen mode 
 
 //This version won't show on Safari(apple) browsers but the below will 
@@ -100,11 +107,11 @@ handle Full Screen (for immersive experiences)
         document.exitFullscreen()
         console.log('Leave Full Screen')
     }
-})`
+    })`
 
 --> For ALL Browsers <--
 
-`window.addEventListener('dblclick', () =>
+    `window.addEventListener('dblclick', () =>
 {
     const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement
 
