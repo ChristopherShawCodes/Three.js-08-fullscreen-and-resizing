@@ -112,8 +112,8 @@ handle Full Screen (for immersive experiences)
 --> For ALL Browsers <--
 
     `window.addEventListener('dblclick', () =>
-{
-    const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement
+    {
+        const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement
 
     if(!fullscreenElement)
     {
